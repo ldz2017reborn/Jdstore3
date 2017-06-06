@@ -1,0 +1,53 @@
+<div class="product-index">
+  <div class="row">
+    <span class="tab1">
+      <span class="tab">
+    <% Category.all.each do |category| %>
+      <li>
+       <%= link_to(category.name, products_path(category: category.name), class:"btn btn-unique") %>
+     </li>
+     <% end %>
+   </span>
+ </span>
+
+   <span class="dropdown2">
+   <div class="dropdown clearfix pull-right">
+    <button class="btn btn-unique dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      推荐
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if !params[:order] %>"><%= link_to("新品", products_path) %></li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_quantity' %>"><%= link_to("销量", products_path(:order => "by_product_quantity")) %></li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_price' %>"><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
+     </ul>
+   </div>
+ </span>
+ </div>
+
+   <div class="row text-center">
+     <% @products.each do |product| %>
+     <div class="col-lg-4 col-md-6 col-sm-12 ">
+       <div class="card">
+         <div class="view overlay hm-white-slight">
+           <%= link_to product_path(product) do %>
+             <% if product.image.present? %>
+               <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+             <% else %>
+               <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+             <% end %>
+           <% end %>
+         </div>
+          <div class="card-block">
+            <h3><%= product.title %></h3>
+            <p class="card-text">
+              ￥ <%= product.price %>
+            </p>
+            <button class="btn btn-unique"><%= link_to("查看详情",product_path(product))%></button>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>

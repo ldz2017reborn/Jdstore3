@@ -1,0 +1,67 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div id="cop1" class="item active">
+      <img src='<%= image_url 'welcome1.jpg' %>'>
+      <div class="carousel-caption">
+        <h2><a href="/products">可&ensp;恋</a></h2>
+        <p><a href="/products">愿花朵的芬芳送给你美好的心情！</a></p>
+        <p class="badge"><a href="/products">探索</a></p>
+      </div>
+    </div>
+
+    <div id="cop2" class="item">
+      <img src='<%= image_url 'welcome2.jpg' %>'>
+      <div class="carousel-caption">
+        <h2><a href="/products">可&ensp;恋</a></h2>
+        <p><a href="/products">愿花朵的清新带给你居家的舒适！</a></p>
+        <p class="badge"><a href="/products">寻找</a></p>
+      </div>
+    </div>
+
+    <div id="cop3" class="item">
+      <img src= '<%= image_url 'welcome3.jpg' %>'>
+      <div class="carousel-caption">
+        <h2><a href="/products">可&ensp;恋</a></h2>
+        <p><a href="/products">愿花朵的绚丽点缀你浪漫的婚礼！</a></p>
+        <p class="badge"><a href="/products">发现</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">上一页</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">下一页</span>
+  </a>
+</div>
+
+
+<div class="test">
+  <div class="row">
+    <h2 class="text-center">推荐花卉</h2>
+    <div class="short-line"></div>
+      <div class="col-md-12">
+        <div class="col-md-6 .col-md-offset-3">
+             <ul class="social">
+              <li class="block1"><%= image_tag("item_1的副本.jpg") %><%= link_to 'https://evening-anchorage-89743.herokuapp.com/products/1' do %><% end %></li>
+              <li class="block2"><%= image_tag("item_2的副本.jpg") %><%= link_to 'https://evening-anchorage-89743.herokuapp.com/products/2' do %><% end %></li>
+              <li class="block3"><%= image_tag("item_3的副本.jpg") %><%= link_to 'https://evening-anchorage-89743.herokuapp.com/products/3' do %><% end %></li>
+              <li class="block4"><%= image_tag("item_4的副本.jpg") %><%= link_to 'https://evening-anchorage-89743.herokuapp.com/products/4' do %><% end %></li>
+              <li class="block5"><%= image_tag("item_5的副本.jpg") %><%= link_to 'https://evening-anchorage-89743.herokuapp.com/products/5' do %><% end %></li>
+            </ul>
+          </div>
+      </div>
+  </div>
+</div>
