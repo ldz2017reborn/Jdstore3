@@ -49,8 +49,6 @@ gem 'masonry-rails'
 gem 'social-share-button'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
-# AWS
-gem 'fog-aws'
 gem 'figaro'
 
 group :development, :test do

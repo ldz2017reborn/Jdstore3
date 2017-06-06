@@ -16,7 +16,7 @@ production:
    qiniu_bucket: jdstore1  # 你的 qiniu bucket
    qiniu_bucket_domain: or2ejh3s0.bkt.clouddn.com  # 你的 qiniu bucket domain
 
- development:
+development:
    qiniu_access_key: yhaRB0Hecz9Tl0tAMx6E6yG5nkEKnVIzcsy1wLqg  # 你的 qiniu AccessKey
    qiniu_secret_key: g7nXlPVojHgN3guGk831KzsD6SN_Y7BUy5lv-dV4  # 你的 qiniu SecretKey
    qiniu_bucket: jdstore1  # 你的 qiniu bucket
