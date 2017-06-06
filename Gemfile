@@ -47,6 +47,8 @@ gem 'intercom-rails'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'masonry-rails'
 gem 'social-share-button'
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
 # AWS
 gem 'fog-aws'
 gem 'figaro'
