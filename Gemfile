@@ -48,6 +48,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'masonry-rails'
 gem 'social-share-button'
 # AWS
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
 gem 'fog-aws'
 gem 'figaro'
 
