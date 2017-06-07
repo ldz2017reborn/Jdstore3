@@ -18,6 +18,8 @@ production:
    SEND_CLOUD_USER_NAME: "liudezheng_test_luBE7L"  # 你的 API_USER
 
    SEND_CLOUD_USER_KEY: "Bpqwh8hRR3MikqeF"  # 你的 API_KEY
+   PROJECT_ID:  "145621"
+   PROJECT_KEY:   "5848ecd513cc1a7d202e83619e5c6e54"
 development:
    qiniu_access_key: yhaRB0Hecz9Tl0tAMx6E6yG5nkEKnVIzcsy1wLqg  # 你的 qiniu AccessKey
    qiniu_secret_key: g7nXlPVojHgN3guGk831KzsD6SN_Y7BUy5lv-dV4  # 你的 qiniu SecretKey
@@ -26,3 +28,5 @@ development:
    SEND_CLOUD_USER_NAME: "liudezheng_test_luBE7L"  # 你的 API_USER
 
    SEND_CLOUD_USER_KEY: "Bpqwh8hRR3MikqeF"  # 你的 API_KEY
+   PROJECT_ID:  "145621"
+   PROJECT_KEY:   "5848ecd513cc1a7d202e83619e5c6e54"
