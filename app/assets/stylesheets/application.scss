@@ -20,6 +20,14 @@
  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
  @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/css/mdb.min.css);
 
+
+ h2 h3{
+  color: #1D2330;
+ }
+ p{
+  color: #1D2330;
+ }
+
  /*设置登陆弹窗样式*/
  /****** LOGIN MODAL ******/
  .loginmodal-container {
@@ -172,13 +180,6 @@ color:#888;
  font-weight:300;
 }
  //-- devise end
-
-h2 h3{
- color: #1D2330;
-}
-p{
- color: #1D2330;
-}
 
 //-- product-index start
 .background
@@ -382,12 +383,6 @@ tbody {
 }
 //-- product-table end
 
-//-- show start
-.show-image{
- margin-left: 150px;
-}
-//-- show end
-
 //-- welcome start
 .carousel-inner img {
    width: 100%; /* Set width to 100% */
@@ -577,14 +572,23 @@ h2 {
 }
 //-- index show-box end
 
-//search
-.search-info-title {
-  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
-  color: #0d6ded;
-  font-size: 10px;
-  text-align: center;
-}
+//--search start
 #search-id {
   width: 200px;
   padding-top: 0px;
 }
+//--search end
+
+//-- show-cup start
+.show-cup{
+.quote-box{
+    overflow: hidden;
+    color: #1D2330;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    h2{text-align: center;color: #1D2330;}
+    p{text-align: center;color: #1D2330;}
+}
+}
+//-- show-cup end
