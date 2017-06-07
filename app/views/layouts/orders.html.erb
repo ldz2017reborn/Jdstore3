@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clean 可恋 </title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+          <div class="background row">
+              <%= render "common/navbar" %>
+              <%= render "common/flashes" %>
+              <%= yield %>
+          </div>
+        </div>
+    </body>
+</html>
