@@ -47,9 +47,12 @@ gem 'intercom-rails'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'masonry-rails'
 gem 'social-share-button'
+
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
+
 gem 'figaro'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
