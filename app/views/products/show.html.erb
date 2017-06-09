@@ -28,3 +28,91 @@
 
   </div>
 </div>
+
+          <!-- 商品评论区域 --><!--对商品评论以及评星-->
+          <div class="product-particulars-box row tab-pane" id="tab_default_2">
+            <div class="text-center">
+              <h3>综合评价</h3>
+              <div class="star-freshness" data-score= <%= @avg_review %> >新鲜： </div>
+              <div class="star-look" data-score= <%= @avg_look %> >外观： </div>
+              <div class="star-price" data-score= <%= @avg_price %> >价格： </div>
+            </div>
+            <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
+
+            <hr>
+
+            <% @reviews.each do |review| %>
+              <div class="reviews">
+                <ul>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-7 review-user-email"><%= review.user.email %></div>
+                      <div class="col-xs-4"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
+                      <div class="col-xs-1">
+                        <% if review.user == current_user %>
+                          <%= link_to product_review_path(@product, review), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash"></i><% end %>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="review-comment">
+                      新鲜： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
+                      外观： <div class="star-look" data-score= <%= review.look %> ></div>
+                      价格： <div class="star-price" data-score= <%= review.price %> ></div>
+                      <%= review.body %>
+                    </div>
+                  </li>
+                </ul>
+                <div class="review-hr">
+                  <hr>
+                </div>
+              </div>
+              <% end %>
+          </div>
+        </div>
+
+
+  <script>
+    $('.star-freshness').raty({
+          path: '/assets/',
+              readOnly: true,
+              score: function() {
+            return $(this).attr('data-score');
+          }
+    });
+    $('.star-look').raty({
+          path: '/assets/',
+              readOnly: true,
+              score: function() {
+            return $(this).attr('data-score');
+          }
+    });
+    $('.star-price').raty({
+          path: '/assets/',
+              readOnly: true,
+              score: function() {
+            return $(this).attr('data-score');
+          }
+    });
+
+    $('#star-freshness').raty({
+    path: '/assets/',
+    scoreName: 'review[freshness]'
+    });
+
+    $('#star-look').raty({
+    path: '/assets/',
+    scoreName: 'review[look]'
+    });
+
+    $('#star-price').raty({
+        path: '/assets/',
+        scoreName: 'review[price]'
+    });
+
+
+  <!-- 必须要选一颗星 -->
+    $('#star-freshness img').eq(0).trigger('click')
+    $('#star-look img').eq(0).trigger('click')
+    $('#star-price img').eq(0).trigger('click')
+
+  </script>
