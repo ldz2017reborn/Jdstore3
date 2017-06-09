@@ -294,10 +294,19 @@ color:#888;
 //-- index-dropdown end
 
 //-- footer start
-.footer{
- padding: 20px 0 20px 0;
- background-color: #FCE4EC;
+.footer {
+  height: 70px;
+  background-color: #414a60;
+  p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+  }
 }
+main {
+  margin-bottom: 70px;
+}
+
 //-- footer end
 
 //-- content test start
