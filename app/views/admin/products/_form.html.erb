@@ -1,0 +1,6 @@
+
+app/views/admin/products/_form.html.erb
+
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
+    <%= f.input :is_hidden %>
