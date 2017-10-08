@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :products do
+    collection do
+      get :search
+    end
      member do
        post :add_to_cart
      end

@@ -52,6 +52,9 @@ gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 
 gem 'figaro'
+gem 'airbrake', '~> 5.4'
+
+
 
 
 group :development, :test do
