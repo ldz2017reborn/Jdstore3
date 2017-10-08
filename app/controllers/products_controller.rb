@@ -8,8 +8,8 @@ class ProductsController < ApplicationController
              Product.order('price DESC')
        when 'by_product_quantity'
              Product.order('quantity DESC')
-       when 'by_product_like'
-             Product.order('like DESC')
+       when 'by_product_new'
+             Product.order('new DESC')
            else
              Product.order('created_at DESC')
            end
@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
     else
       flash[:warning] = "你的购物车内已有此物品"
     end
-   redirect_to :back
+    render :js => "alert('ok');"
  end
 
 

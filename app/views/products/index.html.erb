@@ -17,7 +17,7 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if !params[:order] %>"><%= link_to("新品", products_path) %></li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if !params[:order]== 'by_product_new' %>"><%= link_to("新品", products_path) %></li>
       <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_quantity' %>"><%= link_to("销量", products_path(:order => "by_product_quantity")) %></li>
       <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_price' %>"><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
      </ul>
